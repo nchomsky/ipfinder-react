@@ -7,7 +7,17 @@ class App extends React.Component {
     state = { country: null, state: null, errorMessage: '' }
 
     componentDidMount() {
-
+        //finds your ip
+        fetch('https://extreme-ip-lookup.com/json/').then(res => res.json()).then(response => {
+            this.setState({ country: response.country });
+            this.setState({ state: response.region });
+            console.log("Country: ", response.country);
+            console.log("State: ", response.region);
+        })
+            .catch((data, status) => {
+                console.log('Request failed');
+                this.setState({ errorMessage: status });
+            })
     }
 
     renderContent() {
