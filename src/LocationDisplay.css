@@ -1,0 +1,26 @@
+.location-display {
+  background-color: #192a56;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.info {
+  background-color: rgba(156, 176, 226, 0.3);
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.content h1 {
+  position: relative;
+  left: 30px;
+  color: #9cb0e2;
+}
+span.country-id {
+  color: #b7c5ea;
+}
+
+span.state-id {
+  color: #b7c5ea;
+}
